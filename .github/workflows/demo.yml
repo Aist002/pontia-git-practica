@@ -7,6 +7,7 @@ on:
         description: 'Mensaje de texto a imprimir'
         required: true
         default: 'Hola por defecto'
+        type: string
 
 jobs:
   imprimir-mensaje:
