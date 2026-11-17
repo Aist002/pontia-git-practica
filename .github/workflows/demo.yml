@@ -1,0 +1,16 @@
+name: Demo Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      mensaje:
+        description: 'Mensaje de texto a imprimir'
+        required: true
+        default: 'Hola por defecto'
+
+jobs:
+  imprimir-mensaje:
+    runs-on: ubuntu-26.04
+    steps:
+      - name: Mensaje personalizado
+        run: echo "${{ github.event.inputs.mensaje }}"
